@@ -32,11 +32,11 @@
     "Main": {
       "type": "blocks"
     },
-    "categories": {
+    "category": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "mappedBy": "project_article"
+      "inversedBy": "project_articles"
     },
     "author": {
       "type": "relation",

@@ -21,11 +21,11 @@
     "description": {
       "type": "text"
     },
-    "project_article": {
+    "project_articles": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
       "target": "api::project-article.project-article",
-      "inversedBy": "categories"
+      "mappedBy": "category"
     }
   }
 }

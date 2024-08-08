@@ -840,9 +840,9 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
     name: Attribute.String;
     slug: Attribute.UID;
     description: Attribute.Text;
-    project_article: Attribute.Relation<
+    project_articles: Attribute.Relation<
       'api::category.category',
-      'manyToOne',
+      'oneToMany',
       'api::project-article.project-article'
     >;
     createdAt: Attribute.DateTime;
@@ -911,9 +911,9 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
     Title: Attribute.String;
     Cover: Attribute.Media;
     Main: Attribute.Blocks;
-    categories: Attribute.Relation<
+    category: Attribute.Relation<
       'api::project-article.project-article',
-      'oneToMany',
+      'manyToOne',
       'api::category.category'
     >;
     author: Attribute.Relation<
