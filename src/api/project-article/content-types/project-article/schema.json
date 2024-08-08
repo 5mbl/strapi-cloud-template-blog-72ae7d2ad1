@@ -43,6 +43,15 @@
       "relation": "oneToOne",
       "target": "api::author.author",
       "inversedBy": "project_article"
+    },
+    "SEOtitel": {
+      "type": "string"
+    },
+    "SEOdesc": {
+      "type": "text"
+    },
+    "Resources": {
+      "type": "blocks"
     }
   }
 }
