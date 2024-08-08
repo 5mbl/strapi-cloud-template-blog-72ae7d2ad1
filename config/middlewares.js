@@ -5,7 +5,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'https://bold-bloom-949950c73b.strapiapp.com'], // Add your local development server here
+      origin: ['http://localhost:3000', 'https://bold-bloom-949950c73b.strapiapp.com', 'http://localhost:1337'], // Add your local development server here
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
     },
