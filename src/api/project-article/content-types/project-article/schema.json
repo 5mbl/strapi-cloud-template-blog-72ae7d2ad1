@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Description": {
+    "description": {
       "type": "string"
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Cover": {
+    "cover": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -29,7 +29,7 @@
         "audios"
       ]
     },
-    "Main": {
+    "main": {
       "type": "blocks"
     },
     "categories": {
@@ -44,13 +44,13 @@
       "target": "api::author.author",
       "inversedBy": "project_article"
     },
-    "SEOtitel": {
+    "seotitel": {
       "type": "string"
     },
-    "SEOdesc": {
+    "seodesc": {
       "type": "text"
     },
-    "Resources": {
+    "resources": {
       "type": "blocks"
     }
   }

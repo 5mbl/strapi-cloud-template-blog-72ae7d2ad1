@@ -907,10 +907,10 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    Description: Attribute.String;
-    Title: Attribute.String;
-    Cover: Attribute.Media;
-    Main: Attribute.Blocks;
+    description: Attribute.String;
+    title: Attribute.String;
+    cover: Attribute.Media;
+    main: Attribute.Blocks;
     categories: Attribute.Relation<
       'api::project-article.project-article',
       'manyToMany',
@@ -921,9 +921,9 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
       'oneToOne',
       'api::author.author'
     >;
-    SEOtitel: Attribute.String;
-    SEOdesc: Attribute.Text;
-    Resources: Attribute.Blocks;
+    seotitel: Attribute.String;
+    seodesc: Attribute.Text;
+    resources: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
