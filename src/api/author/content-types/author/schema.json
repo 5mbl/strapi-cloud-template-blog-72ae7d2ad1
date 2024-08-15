@@ -28,11 +28,11 @@
     "email": {
       "type": "string"
     },
-    "project_article": {
+    "project_articles": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToMany",
       "target": "api::project-article.project-article",
-      "mappedBy": "author"
+      "mappedBy": "authors"
     }
   }
 }

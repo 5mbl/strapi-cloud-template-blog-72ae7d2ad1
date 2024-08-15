@@ -803,9 +803,9 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
     name: Attribute.String;
     avatar: Attribute.Media;
     email: Attribute.String;
-    project_article: Attribute.Relation<
+    project_articles: Attribute.Relation<
       'api::author.author',
-      'oneToOne',
+      'manyToMany',
       'api::project-article.project-article'
     >;
     createdAt: Attribute.DateTime;
@@ -916,9 +916,9 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
-    author: Attribute.Relation<
+    authors: Attribute.Relation<
       'api::project-article.project-article',
-      'oneToOne',
+      'manyToMany',
       'api::author.author'
     >;
     projectinfo: Attribute.Component<'shared.project-info', true>;
