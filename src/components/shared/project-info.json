@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_shared_project_infos",
+  "info": {
+    "displayName": "Project-Info",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Socials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.socials"
+    },
+    "Blockchain": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.blockchain"
+    },
+    "Team": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.team"
+    }
+  }
+}

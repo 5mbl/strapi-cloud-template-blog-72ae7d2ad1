@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_blockchains",
+  "info": {
+    "displayName": "Blockchain",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ca": {
+      "type": "string"
+    },
+    "explorer": {
+      "type": "string"
+    }
+  }
+}

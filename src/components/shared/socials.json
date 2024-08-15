@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_shared_socials",
+  "info": {
+    "displayName": "Socials",
+    "icon": "star",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "website": {
+      "type": "string"
+    },
+    "farcaster": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    },
+    "youtube": {
+      "type": "string"
+    },
+    "medium": {
+      "type": "string"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "discord": {
+      "type": "string"
+    },
+    "whitepaper": {
+      "type": "string"
+    }
+  }
+}

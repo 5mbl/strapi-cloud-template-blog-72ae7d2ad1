@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_teams",
+  "info": {
+    "displayName": "Team",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "founder": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

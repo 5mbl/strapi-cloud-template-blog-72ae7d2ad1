@@ -44,14 +44,10 @@
       "target": "api::author.author",
       "inversedBy": "project_article"
     },
-    "seotitel": {
-      "type": "string"
-    },
-    "seodesc": {
-      "type": "text"
-    },
-    "resources": {
-      "type": "blocks"
+    "projectinfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.project-info"
     }
   }
 }

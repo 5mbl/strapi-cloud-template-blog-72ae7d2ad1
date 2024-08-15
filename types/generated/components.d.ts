@@ -1,5 +1,18 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface SharedBlockchain extends Schema.Component {
+  collectionName: 'components_shared_blockchains';
+  info: {
+    displayName: 'Blockchain';
+    icon: 'link';
+    description: '';
+  };
+  attributes: {
+    ca: Attribute.String;
+    explorer: Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Schema.Component {
   collectionName: 'components_shared_media';
   info: {
@@ -11,27 +24,17 @@ export interface SharedMedia extends Schema.Component {
   };
 }
 
-export interface SharedQuote extends Schema.Component {
-  collectionName: 'components_shared_quotes';
+export interface SharedProjectInfo extends Schema.Component {
+  collectionName: 'components_shared_project_infos';
   info: {
-    displayName: 'Quote';
-    icon: 'indent';
-  };
-  attributes: {
-    title: Attribute.String;
-    body: Attribute.Text;
-  };
-}
-
-export interface SharedRichText extends Schema.Component {
-  collectionName: 'components_shared_rich_texts';
-  info: {
-    displayName: 'Rich text';
-    icon: 'align-justify';
+    displayName: 'Project-Info';
+    icon: 'book';
     description: '';
   };
   attributes: {
-    body: Attribute.RichText;
+    Socials: Attribute.Component<'shared.socials', true>;
+    Blockchain: Attribute.Component<'shared.blockchain', true>;
+    Team: Attribute.Component<'shared.team', true>;
   };
 }
 
@@ -50,26 +53,49 @@ export interface SharedSeo extends Schema.Component {
   };
 }
 
-export interface SharedSlider extends Schema.Component {
-  collectionName: 'components_shared_sliders';
+export interface SharedSocials extends Schema.Component {
+  collectionName: 'components_shared_socials';
   info: {
-    displayName: 'Slider';
-    icon: 'address-book';
+    displayName: 'Socials';
+    icon: 'star';
     description: '';
   };
   attributes: {
-    files: Attribute.Media;
+    website: Attribute.String;
+    farcaster: Attribute.String;
+    twitter: Attribute.String;
+    linkedin: Attribute.String;
+    github: Attribute.String;
+    youtube: Attribute.String;
+    medium: Attribute.String;
+    telegram: Attribute.String;
+    discord: Attribute.String;
+    whitepaper: Attribute.String;
+  };
+}
+
+export interface SharedTeam extends Schema.Component {
+  collectionName: 'components_shared_teams';
+  info: {
+    displayName: 'Team';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    founder: Attribute.String;
+    image: Attribute.Media;
   };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'shared.blockchain': SharedBlockchain;
       'shared.media': SharedMedia;
-      'shared.quote': SharedQuote;
-      'shared.rich-text': SharedRichText;
+      'shared.project-info': SharedProjectInfo;
       'shared.seo': SharedSeo;
-      'shared.slider': SharedSlider;
+      'shared.socials': SharedSocials;
+      'shared.team': SharedTeam;
     }
   }
 }

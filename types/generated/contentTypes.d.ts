@@ -921,9 +921,7 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
       'oneToOne',
       'api::author.author'
     >;
-    seotitel: Attribute.String;
-    seodesc: Attribute.Text;
-    resources: Attribute.Blocks;
+    projectinfo: Attribute.Component<'shared.project-info', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
