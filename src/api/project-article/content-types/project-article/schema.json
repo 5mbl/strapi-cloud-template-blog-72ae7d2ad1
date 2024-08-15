@@ -38,9 +38,9 @@
       "target": "api::category.category",
       "inversedBy": "project_articles"
     },
-    "authors": {
+    "author": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "project_articles"
     },

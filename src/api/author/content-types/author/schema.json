@@ -30,9 +30,9 @@
     },
     "project_articles": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "oneToMany",
       "target": "api::project-article.project-article",
-      "mappedBy": "authors"
+      "mappedBy": "author"
     }
   }
 }
