@@ -16,7 +16,8 @@
       "type": "string"
     },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "cover": {
       "type": "media",
@@ -48,6 +49,15 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.project-info"
+    },
+    "Seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    },
+    "projectUID": {
+      "type": "string",
+      "required": true
     }
   }
 }

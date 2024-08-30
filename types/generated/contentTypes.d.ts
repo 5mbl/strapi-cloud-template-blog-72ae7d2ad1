@@ -908,7 +908,7 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
   };
   attributes: {
     description: Attribute.String;
-    title: Attribute.String;
+    title: Attribute.String & Attribute.Required;
     cover: Attribute.Media;
     main: Attribute.Blocks;
     categories: Attribute.Relation<
@@ -922,6 +922,8 @@ export interface ApiProjectArticleProjectArticle extends Schema.CollectionType {
       'api::author.author'
     >;
     projectinfo: Attribute.Component<'shared.project-info', true>;
+    Seo: Attribute.Component<'shared.seo', true>;
+    projectUID: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
